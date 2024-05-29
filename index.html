@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .visual {
+      background-image: url(fadeimg/visual_bg.jpg);
+    }
+    .visual .ineer {
+      width: 1100px;
+      margin: 0 auto;
+      /* background-color: skyblue; */
+      height: 646px;
+      position: relative;
+    }
+
+    .visual .title{
+      position: absolute;
+      top: 88px;
+      left: -10px;
+    }
+
+    .visual .pcup1{
+      position: absolute;
+      bottom: 120px;
+      right: 600px;
+      /* background-color: orange; */
+    }
+
+    .visual .cup1.text {
+      position: absolute;
+      top: -20px;
+      right: -30px;
+      width: 120px;
+    }
+
+    .visual .pcup2 {
+      position: absolute;
+      bottom: 120px;
+      right: 110px;
+    }
+
+    .visual .cup2.text{
+      position: absolute;
+      top: -20px;
+      right: -30px;
+      width: 120px;
+    }
+
+    .visual .pspoon{
+      position: absolute;
+      bottom: 360px;
+      left: 800px;
+    }
+    .visual .pspoon img{
+      width: 400px;
+    }
+    .visual .cup1.title{
+      position: absolute;
+      top: 220px;
+      font-size: 25px;
+      font-weight: 800;
+      text-align: center;
+      left: 70px;
+    }
+    .visual .cup2.title{
+      position: absolute;
+      top: 220px;
+      font-size: 25px;
+      font-weight: 800;
+      text-align: center;
+      left: 120px;
+    }
+    .visual .cup2.image{
+      height: 215px;
+    }
+  </style>
+</head>
+<body>
+  
+  <section class="visual">
+    <div class="ineer">
+      <div class="title fade-in">
+        <img src="fadeimg/steamicon.svg" alt="">
+      </div>
+      <div class="pcup1 fade-in">
+        <img src="fadeimg/lobotomy.webp" alt="" class="cup1 image">
+        <img src="fadeimg/70per.png" alt="" class="cup1 text">
+        <span class="cup1 title">LOBOTOMY CORPORATION<br>로보토미 코퍼레이션</span>
+      </div>
+      <div class="pcup2 fade-in">
+        <img src="fadeimg/readyornot.webp" alt="" class="cup2 image">
+        <img src="fadeimg/40per.png" alt="" class="cup2 text">
+        <span class="cup2 title">Ready or Not<br>레디 오어 낫</span>
+      </div>
+      <div class="pspoon fade-in">
+        <img src="fadeimg/pngaaa.com-6177014.png" alt="">
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script>
+    const fadEls = document.querySelectorAll('.visual .fade-in');
+    gsap.from(fadEls, {
+      duration: 4,
+      scale: .3,
+      ease : 'bounce.out',
+      opacity : 0,
+      stagger: 0.7
+    })
+  </script>
+
+</body>
+</html>
